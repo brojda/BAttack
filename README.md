@@ -1,6 +1,6 @@
 # BAttack
-Ddos attak tool
-                                 ~welcome to BLACK ATTACK~
+
+                     ~welcome to BLACK ATTACK~
  __INFO__
 
        BAttack is coded by Ibrahim Al-Jdaan to ddos_attak in python3.
@@ -26,8 +26,8 @@ __AUTHOR__
 
 	#################################
 	#    Author :  Ibrahim Al-Jdaan #
-	#    Team   :  BroJda ^^				 #
+	#    Team   :  BroJda ^^        #
 	#    Publish:  20/11/2019       #
-	#    Name  :  BAttack					   #
-	#    Language: python3				   #
+	#    Name   :  BAttack          #
+	#    Language: python3          #
 	#################################
