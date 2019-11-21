@@ -1,4 +1,4 @@
-import socket,os,time,sys
+import socket,os,time,sys,urllib.request
 r="\033[31m";g="\033[32m";k="\033[37m" ;bb="\033[40m";ww="\033[47m"
 print ("\033[36m"+bb)
 os.system ("clear")
@@ -6,6 +6,26 @@ time.sleep(0.3)
 os. system ("figlet -f slant '    black Attack    '")
 print ("\033[34m                                               V: 2.6")
 print ("\033[36m\n\n               ********"+"\033[34m Welcome at "+r+ "black Attack " +"\033[36m********\n\n\n")
+def update():
+    try:
+        check=urllib.request.urlopen("https://brojda.000webhostapp.com/battack/version")
+        update=check.read().decode('utf-8')
+        version="v1.2"
+        if	version==update:
+            pass
+        else:
+            get=input(W+"  There are updates to ({0}) Do you want update?[Y/n] ".format(update))
+            if get.lower()=="y":
+                name=os.getcwd().split('/')[-1]
+                os.chdir('..')
+                os.remove (name) 
+                os.system('git clone ')
+    except:
+        get=input(W+"  There are updates.Do you want update?[Y/n]")
+        if get.lower()=="y":
+                os.system('cd ..')
+                os.system('rm -rif ransom-maker-master')
+                os.system('git clone ')
 def ipget(target):
     try:
         ip=socket.gethostbyname(target)
