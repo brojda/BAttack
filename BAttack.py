@@ -19,13 +19,15 @@ def update():
                 name=os.getcwd().split('/')[-1]
                 os.chdir('..')
                 os.remove (name) 
-                os.system('git clone ')
+                os.system('git clone https://github.com/brojda/BAttack.git')
     except:
         get=input(W+"  There are updates.Do you want update?[Y/n]")
         if get.lower()=="y":
-                os.system('cd ..')
-                os.system('rm -rif ransom-maker-master')
-                os.system('git clone ')
+        
+            name=os.getcwd().split('/')[-1]
+            os.chdir('..')
+            os.remove (name) 
+            os.system('git clone https://github.com/brojda/BAttack.git')
 def ipget(target):
     try:
         ip=socket.gethostbyname(target)
