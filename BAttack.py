@@ -14,6 +14,7 @@ def update():
         update=check.read().decode('utf-8')
         version="v2.6"
         if	version==update:
+            maner=1
             pass
         else:
             get=input(W+"  There are updates to ({0}) Do you want update?[Y/n] ".format(update))
@@ -30,7 +31,8 @@ def update():
             os.chdir('..')
             os.system('rm -rif {0}'.format(name)) 
             os.system('git clone https://github.com/brojda/BAttack.git')
-    exit()
+    if maner != 1:
+        exit()
 def ipget(target):
     try:
         ip=socket.gethostbyname(target)
