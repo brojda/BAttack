@@ -23,7 +23,8 @@ def update():
     except:
         get=input(W+"  There are updates.Do you want update?[Y/n]")
         if get.lower()=="y":
-        
+
+
             name=os.getcwd().split('/')[-1]
             os.chdir('..')
             os.remove (name) 
@@ -49,7 +50,7 @@ def attack(ip):
         except socket.timeout:
             print (r+"                    ----->socket.timeout<-----                      ",end='\r') 
 if __name__=="__main__" :
-    updated()
+    update()
     try:
         target =sys.argv[1]
     except:
