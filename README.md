@@ -9,9 +9,9 @@
 
 
 __USAGE__
-
+  There are two ways to run it:
    1)  python3 BAttack.py
-
+   or
    2)  python3 BAttack.py www.exmable.com
 
 To tell us anything run :
