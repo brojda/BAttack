@@ -8,7 +8,8 @@ def logo():
     print ("\033[34m                                               V: 2.6")
     print ("\033[36m\n\n               ********"+"\033[34m Welcome at "+r+ "black Attack " +"\033[36m********\n\n\n")
 def update():
-    os.system('clear') 
+    os.system('clear')
+    maner=0
     try:
         check=urllib.request.urlopen("https://brojda.000webhostapp.com/BAttack/version")
         update=check.read().decode('utf-8')
