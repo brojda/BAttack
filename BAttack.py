@@ -1,34 +1,36 @@
 import socket,os,time,sys,urllib.request
-r="\033[31m";g="\033[32m";k="\033[37m" ;bb="\033[40m";ww="\033[47m"
-print ("\033[36m"+bb)
-os.system ("clear")
-time.sleep(0.3)
-os. system ("figlet -f slant '    black Attack    '")
-print ("\033[34m                                               V: 2.6")
-print ("\033[36m\n\n               ********"+"\033[34m Welcome at "+r+ "black Attack " +"\033[36m********\n\n\n")
+r="\033[31m";g="\033[32m";k="\033[37m";bb="\033[40m";ww="\033[47m";W='\033[37m'
+def logo():
+    print ("\033[36m"+bb)
+    os.system ("clear")
+    time.sleep(0.3)
+    os. system ("figlet -f slant '    black Attack    '")
+    print ("\033[34m                                               V: 2.6")
+    print ("\033[36m\n\n               ********"+"\033[34m Welcome at "+r+ "black Attack " +"\033[36m********\n\n\n")
 def update():
+    os.system('clear') 
     try:
-        check=urllib.request.urlopen("https://brojda.000webhostapp.com/battack/version")
+        check=urllib.request.urlopen("https://brojda.000webhostapp.com/BAttack/version")
         update=check.read().decode('utf-8')
-        version="v1.2"
+        version="v1."
         if	version==update:
             pass
         else:
             get=input(W+"  There are updates to ({0}) Do you want update?[Y/n] ".format(update))
             if get.lower()=="y":
-                name=os.getcwd().split('/')[-1]
+                name=os.getcwd()
                 os.chdir('..')
-                os.remove (name) 
+                os.system('rm -rif {0}'.format(name)) 
                 os.system('git clone https://github.com/brojda/BAttack.git')
+                exit()
     except:
         get=input(W+"  There are updates.Do you want update?[Y/n]")
         if get.lower()=="y":
-
-
-            name=os.getcwd().split('/')[-1]
+            name=os.getcwd()
             os.chdir('..')
-            os.remove (name) 
+            os.system('rm -rif {0}'.format(name)) 
             os.system('git clone https://github.com/brojda/BAttack.git')
+            exit()
 def ipget(target):
     try:
         ip=socket.gethostbyname(target)
@@ -51,6 +53,7 @@ def attack(ip):
             print (r+"                    ----->socket.timeout<-----                      ",end='\r') 
 if __name__=="__main__" :
     update()
+    logo() 
     try:
         target =sys.argv[1]
     except:
