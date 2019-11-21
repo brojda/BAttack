@@ -12,7 +12,7 @@ def update():
     try:
         check=urllib.request.urlopen("https://brojda.000webhostapp.com/BAttack/version")
         update=check.read().decode('utf-8')
-        version="v1."
+        version="v2.6"
         if	version==update:
             pass
         else:
@@ -22,7 +22,7 @@ def update():
                 os.chdir('..')
                 os.system('rm -rif {0}'.format(name)) 
                 os.system('git clone https://github.com/brojda/BAttack.git')
-                exit()
+
     except:
         get=input(W+"  There are updates.Do you want update?[Y/n]")
         if get.lower()=="y":
@@ -30,7 +30,7 @@ def update():
             os.chdir('..')
             os.system('rm -rif {0}'.format(name)) 
             os.system('git clone https://github.com/brojda/BAttack.git')
-            exit()
+    exit()
 def ipget(target):
     try:
         ip=socket.gethostbyname(target)
