@@ -49,6 +49,7 @@ def attack(ip):
         except socket.timeout:
             print (r+"                    ----->socket.timeout<-----                      ",end='\r') 
 if __name__=="__main__" :
+    updated()
     try:
         target =sys.argv[1]
     except:
